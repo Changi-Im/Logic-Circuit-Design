@@ -1,0 +1,1146 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+                Version O-2018.06-SP4 for linux64 - Nov 27, 2018
+
+                    Copyright (c) 1988 - 2018 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+set currentDesign ALU
+ALU
+set sourceFolder  {rtl}
+rtl
+#Need not touch from here
+set tmpStr ./saed32hvt_ff0p95v125c.db
+./saed32hvt_ff0p95v125c.db
+set target_library $tmpStr
+./saed32hvt_ff0p95v125c.db
+set link_library "* $target_library"
+* ./saed32hvt_ff0p95v125c.db
+analyze $sourceFolder -autoread -recursive -top $currentDesign
+== ANALYZE autoread for top design 'ALU' ==
+
+Starting ANALYZE autoread mode...
+Information: Adding '/home/KNUEEhdd1/comp311/comp9/work1/proj1/dc/rtl'.  (AUTOREAD-100)
+Warning: Adding missing directory to search_path - '/home/KNUEEhdd1/comp311/comp9/work1/proj1/dc/rtl'. (AUTOREAD-105)
+Information: Adding '/home/KNUEEhdd1/comp311/comp9/work1/proj1/dc/rtl/subtractor.v'.  (AUTOREAD-100)
+Information: Adding '/home/KNUEEhdd1/comp311/comp9/work1/proj1/dc/rtl/ALU_tb.v'.  (AUTOREAD-100)
+Information: Adding '/home/KNUEEhdd1/comp311/comp9/work1/proj1/dc/rtl/multiplier.v'.  (AUTOREAD-100)
+Information: Adding '/home/KNUEEhdd1/comp311/comp9/work1/proj1/dc/rtl/ALU.v'.  (AUTOREAD-100)
+Information: Adding '/home/KNUEEhdd1/comp311/comp9/work1/proj1/dc/rtl/divider.v'.  (AUTOREAD-100)
+Information: Adding '/home/KNUEEhdd1/comp311/comp9/work1/proj1/dc/rtl/mux41.v'.  (AUTOREAD-100)
+Information: Adding '/home/KNUEEhdd1/comp311/comp9/work1/proj1/dc/rtl/adder.v'.  (AUTOREAD-100)
+Information: Scanning file { subtractor.v }. (AUTOREAD-303)
+Information: Scanning file { ALU_tb.v }. (AUTOREAD-303)
+Information: Scanning file { multiplier.v }. (AUTOREAD-303)
+Information: Scanning file { ALU.v }. (AUTOREAD-303)
+Information: Scanning file { divider.v }. (AUTOREAD-303)
+Information: Scanning file { mux41.v }. (AUTOREAD-303)
+Information: Scanning file { adder.v }. (AUTOREAD-303)
+Compiling source file /home/KNUEEhdd1/comp311/comp9/work1/proj1/dc/rtl/adder.v
+Presto compilation completed successfully.
+Compiling source file /home/KNUEEhdd1/comp311/comp9/work1/proj1/dc/rtl/subtractor.v
+Presto compilation completed successfully.
+Compiling source file /home/KNUEEhdd1/comp311/comp9/work1/proj1/dc/rtl/multiplier.v
+Presto compilation completed successfully.
+Compiling source file /home/KNUEEhdd1/comp311/comp9/work1/proj1/dc/rtl/divider.v
+Presto compilation completed successfully.
+Compiling source file /home/KNUEEhdd1/comp311/comp9/work1/proj1/dc/rtl/mux41.v
+Presto compilation completed successfully.
+Compiling source file /home/KNUEEhdd1/comp311/comp9/work1/proj1/dc/rtl/ALU.v
+Presto compilation completed successfully.
+Autoread command completed successfully.
+1
+elaborate     $currentDesign
+Loading db file '/home/KNUEEhdd1/comp311/comp9/work1/proj1/dc/saed32hvt_ff0p95v125c.db'
+Loading db file '/usr/synopsys/syn/O-2018.06-SP4/libraries/syn/gtech.db'
+Loading db file '/usr/synopsys/syn/O-2018.06-SP4/libraries/syn/standard.sldb'
+  Loading link library 'saed32hvt_ff0p95v125c'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'ALU'.
+Information: Building the design 'add'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'sub'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'mul'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'div'. (HDL-193)
+Warning:  /home/KNUEEhdd1/comp311/comp9/work1/proj1/dc/rtl/divider.v:15: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/KNUEEhdd1/comp311/comp9/work1/proj1/dc/rtl/divider.v:19: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/KNUEEhdd1/comp311/comp9/work1/proj1/dc/rtl/divider.v:23: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/KNUEEhdd1/comp311/comp9/work1/proj1/dc/rtl/divider.v:27: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/KNUEEhdd1/comp311/comp9/work1/proj1/dc/rtl/divider.v:31: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/KNUEEhdd1/comp311/comp9/work1/proj1/dc/rtl/divider.v:35: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/KNUEEhdd1/comp311/comp9/work1/proj1/dc/rtl/divider.v:39: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/KNUEEhdd1/comp311/comp9/work1/proj1/dc/rtl/divider.v:43: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/KNUEEhdd1/comp311/comp9/work1/proj1/dc/rtl/divider.v:47: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/KNUEEhdd1/comp311/comp9/work1/proj1/dc/rtl/divider.v:51: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/KNUEEhdd1/comp311/comp9/work1/proj1/dc/rtl/divider.v:55: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/KNUEEhdd1/comp311/comp9/work1/proj1/dc/rtl/divider.v:59: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/KNUEEhdd1/comp311/comp9/work1/proj1/dc/rtl/divider.v:63: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/KNUEEhdd1/comp311/comp9/work1/proj1/dc/rtl/divider.v:67: signed to unsigned conversion occurs. (VER-318)
+Warning:  /home/KNUEEhdd1/comp311/comp9/work1/proj1/dc/rtl/divider.v:71: signed to unsigned conversion occurs. (VER-318)
+Presto compilation completed successfully.
+Information: Building the design 'mux41'. (HDL-193)
+
+Statistics for case statements in always block at line 8 in file
+	'/home/KNUEEhdd1/comp311/comp9/work1/proj1/dc/rtl/mux41.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            9             |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Information: Building the design 'fa16'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'dova'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'fa4'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'fa1'. (HDL-193)
+
+Statistics for case statements in always block at line 26 in file
+	'/home/KNUEEhdd1/comp311/comp9/work1/proj1/dc/rtl/adder.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            27            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Information: Building the design 'multi8x8'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'fa32'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'dovm'. (HDL-193)
+Presto compilation completed successfully.
+1
+current_design $currentDesign
+Current design is 'ALU'.
+{ALU}
+#setting clock
+#set clockPorts {clk}
+#create_clock -name myCLK $clockPorts -period 2.0 -waveform {0 1.0}
+#Common options
+set_max_area 0
+1
+set_host_options -max_cores 4
+1
+uniquify
+Information: Uniquified 7 instances of design 'fa16'. (OPT-1056)
+Information: Uniquified 31 instances of design 'fa4'. (OPT-1056)
+Information: Uniquified 356 instances of design 'fa1'. (OPT-1056)
+Information: Uniquified 4 instances of design 'multi8x8'. (OPT-1056)
+Information: Uniquified 3 instances of design 'fa32'. (OPT-1056)
+1
+compile
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | O-2018.06-DWBB_201806.4 |     *     |
+| Licensed DW Building Blocks        |                         |           |
+============================================================================
+
+
+Information: There are 240 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'mux41'
+  Processing 'div'
+  Processing 'dovm'
+  Processing 'fa1_0'
+  Processing 'fa4_0'
+  Processing 'fa16_0'
+  Processing 'fa32_0'
+  Processing 'multi8x8_0'
+  Processing 'mul'
+  Processing 'sub'
+  Processing 'dova'
+  Processing 'add'
+  Processing 'ALU'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'div_DW01_add_0'
+  Processing 'div_DW01_add_1'
+  Processing 'div_DW01_add_2'
+  Processing 'div_DW01_add_3'
+  Processing 'div_DW01_add_4'
+  Processing 'div_DW01_add_5'
+  Processing 'div_DW01_add_6'
+  Processing 'div_DW01_add_7'
+  Processing 'div_DW01_add_8'
+  Processing 'div_DW01_add_9'
+  Processing 'div_DW01_add_10'
+  Processing 'div_DW01_add_11'
+  Processing 'div_DW01_add_12'
+  Processing 'div_DW01_add_13'
+  Processing 'div_DW01_cmp2_0'
+  Processing 'div_DW01_sub_0'
+  Processing 'div_DW01_cmp2_1'
+  Processing 'div_DW01_sub_1'
+  Processing 'div_DW01_cmp2_2'
+  Processing 'div_DW01_sub_2'
+  Processing 'div_DW01_cmp2_3'
+  Processing 'div_DW01_sub_3'
+  Processing 'div_DW01_cmp2_4'
+  Processing 'div_DW01_sub_4'
+  Processing 'div_DW01_cmp2_5'
+  Processing 'div_DW01_sub_5'
+  Processing 'div_DW01_cmp2_6'
+  Processing 'div_DW01_sub_6'
+  Processing 'div_DW01_cmp2_7'
+  Processing 'div_DW01_sub_7'
+  Processing 'div_DW01_cmp2_8'
+  Processing 'div_DW01_sub_8'
+  Processing 'div_DW01_cmp2_9'
+  Processing 'div_DW01_sub_9'
+  Processing 'div_DW01_cmp2_10'
+  Processing 'div_DW01_sub_10'
+  Processing 'div_DW01_cmp2_11'
+  Processing 'div_DW01_sub_11'
+  Processing 'div_DW01_cmp2_12'
+  Processing 'div_DW01_sub_12'
+  Processing 'div_DW01_cmp2_13'
+  Processing 'div_DW01_sub_13'
+  Processing 'div_DW01_cmp2_14'
+  Processing 'div_DW01_sub_14'
+  Processing 'div_DW01_cmp2_15'
+  Processing 'dovm_DW01_cmp2_0'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Structuring 'multi8x8_2'
+  Mapping 'multi8x8_2'
+  Structuring 'multi8x8_1'
+  Mapping 'multi8x8_1'
+  Structuring 'multi8x8_0'
+  Mapping 'multi8x8_0'
+  Structuring 'fa1_354'
+  Mapping 'fa1_354'
+  Structuring 'fa1_353'
+  Mapping 'fa1_353'
+  Structuring 'fa1_352'
+  Mapping 'fa1_352'
+  Structuring 'fa1_351'
+  Mapping 'fa1_351'
+  Structuring 'fa1_350'
+  Mapping 'fa1_350'
+  Structuring 'fa1_349'
+  Mapping 'fa1_349'
+  Structuring 'fa1_348'
+  Mapping 'fa1_348'
+  Structuring 'fa1_347'
+  Mapping 'fa1_347'
+  Structuring 'fa1_346'
+  Mapping 'fa1_346'
+  Structuring 'fa1_345'
+  Mapping 'fa1_345'
+  Structuring 'fa1_344'
+  Mapping 'fa1_344'
+  Structuring 'fa1_343'
+  Mapping 'fa1_343'
+  Structuring 'fa1_342'
+  Mapping 'fa1_342'
+  Structuring 'fa1_341'
+  Mapping 'fa1_341'
+  Structuring 'fa1_340'
+  Mapping 'fa1_340'
+  Structuring 'fa1_339'
+  Mapping 'fa1_339'
+  Structuring 'fa1_338'
+  Mapping 'fa1_338'
+  Structuring 'fa1_337'
+  Mapping 'fa1_337'
+  Structuring 'fa1_336'
+  Mapping 'fa1_336'
+  Structuring 'fa1_335'
+  Mapping 'fa1_335'
+  Structuring 'fa1_334'
+  Mapping 'fa1_334'
+  Structuring 'fa1_333'
+  Mapping 'fa1_333'
+  Structuring 'fa1_332'
+  Mapping 'fa1_332'
+  Structuring 'fa1_331'
+  Mapping 'fa1_331'
+  Structuring 'fa1_330'
+  Mapping 'fa1_330'
+  Structuring 'fa1_329'
+  Mapping 'fa1_329'
+  Structuring 'fa1_328'
+  Mapping 'fa1_328'
+  Structuring 'fa1_327'
+  Mapping 'fa1_327'
+  Structuring 'fa1_326'
+  Mapping 'fa1_326'
+  Structuring 'fa1_325'
+  Mapping 'fa1_325'
+  Structuring 'fa1_324'
+  Mapping 'fa1_324'
+  Structuring 'fa1_323'
+  Mapping 'fa1_323'
+  Structuring 'fa1_322'
+  Mapping 'fa1_322'
+  Structuring 'fa1_321'
+  Mapping 'fa1_321'
+  Structuring 'fa1_320'
+  Mapping 'fa1_320'
+  Structuring 'fa1_319'
+  Mapping 'fa1_319'
+  Structuring 'fa1_318'
+  Mapping 'fa1_318'
+  Structuring 'fa1_317'
+  Mapping 'fa1_317'
+  Structuring 'fa1_316'
+  Mapping 'fa1_316'
+  Structuring 'fa1_315'
+  Mapping 'fa1_315'
+  Structuring 'fa1_314'
+  Mapping 'fa1_314'
+  Structuring 'fa1_313'
+  Mapping 'fa1_313'
+  Structuring 'fa1_312'
+  Mapping 'fa1_312'
+  Structuring 'fa1_311'
+  Mapping 'fa1_311'
+  Structuring 'fa1_310'
+  Mapping 'fa1_310'
+  Structuring 'fa1_309'
+  Mapping 'fa1_309'
+  Structuring 'fa1_308'
+  Mapping 'fa1_308'
+  Structuring 'fa1_307'
+  Mapping 'fa1_307'
+  Structuring 'fa1_306'
+  Mapping 'fa1_306'
+  Structuring 'fa1_305'
+  Mapping 'fa1_305'
+  Structuring 'fa1_304'
+  Mapping 'fa1_304'
+  Structuring 'fa1_303'
+  Mapping 'fa1_303'
+  Structuring 'fa1_302'
+  Mapping 'fa1_302'
+  Structuring 'fa1_301'
+  Mapping 'fa1_301'
+  Structuring 'fa1_300'
+  Mapping 'fa1_300'
+  Structuring 'fa1_299'
+  Mapping 'fa1_299'
+  Structuring 'fa1_298'
+  Mapping 'fa1_298'
+  Structuring 'fa1_297'
+  Mapping 'fa1_297'
+  Structuring 'fa1_296'
+  Mapping 'fa1_296'
+  Structuring 'fa1_295'
+  Mapping 'fa1_295'
+  Structuring 'fa1_294'
+  Mapping 'fa1_294'
+  Structuring 'fa1_293'
+  Mapping 'fa1_293'
+  Structuring 'fa1_292'
+  Mapping 'fa1_292'
+  Structuring 'fa1_291'
+  Mapping 'fa1_291'
+  Structuring 'fa1_290'
+  Mapping 'fa1_290'
+  Structuring 'fa1_289'
+  Mapping 'fa1_289'
+  Structuring 'fa1_288'
+  Mapping 'fa1_288'
+  Structuring 'fa1_287'
+  Mapping 'fa1_287'
+  Structuring 'fa1_286'
+  Mapping 'fa1_286'
+  Structuring 'fa1_285'
+  Mapping 'fa1_285'
+  Structuring 'fa1_284'
+  Mapping 'fa1_284'
+  Structuring 'fa1_283'
+  Mapping 'fa1_283'
+  Structuring 'fa1_282'
+  Mapping 'fa1_282'
+  Structuring 'fa1_281'
+  Mapping 'fa1_281'
+  Structuring 'fa1_280'
+  Mapping 'fa1_280'
+  Structuring 'fa1_279'
+  Mapping 'fa1_279'
+  Structuring 'fa1_278'
+  Mapping 'fa1_278'
+  Structuring 'fa1_277'
+  Mapping 'fa1_277'
+  Structuring 'fa1_276'
+  Mapping 'fa1_276'
+  Structuring 'fa1_275'
+  Mapping 'fa1_275'
+  Structuring 'fa1_274'
+  Mapping 'fa1_274'
+  Structuring 'fa1_273'
+  Mapping 'fa1_273'
+  Structuring 'fa1_272'
+  Mapping 'fa1_272'
+  Structuring 'fa1_271'
+  Mapping 'fa1_271'
+  Structuring 'fa1_270'
+  Mapping 'fa1_270'
+  Structuring 'fa1_269'
+  Mapping 'fa1_269'
+  Structuring 'fa1_268'
+  Mapping 'fa1_268'
+  Structuring 'fa1_267'
+  Mapping 'fa1_267'
+  Structuring 'fa1_266'
+  Mapping 'fa1_266'
+  Structuring 'fa1_265'
+  Mapping 'fa1_265'
+  Structuring 'fa1_264'
+  Mapping 'fa1_264'
+  Structuring 'fa1_263'
+  Mapping 'fa1_263'
+  Structuring 'fa1_262'
+  Mapping 'fa1_262'
+  Structuring 'fa1_261'
+  Mapping 'fa1_261'
+  Structuring 'fa1_260'
+  Mapping 'fa1_260'
+  Structuring 'fa1_259'
+  Mapping 'fa1_259'
+  Structuring 'fa1_258'
+  Mapping 'fa1_258'
+  Structuring 'fa1_257'
+  Mapping 'fa1_257'
+  Structuring 'fa1_256'
+  Mapping 'fa1_256'
+  Structuring 'fa1_255'
+  Mapping 'fa1_255'
+  Structuring 'fa1_254'
+  Mapping 'fa1_254'
+  Structuring 'fa1_253'
+  Mapping 'fa1_253'
+  Structuring 'fa1_252'
+  Mapping 'fa1_252'
+  Structuring 'fa1_251'
+  Mapping 'fa1_251'
+  Structuring 'fa1_250'
+  Mapping 'fa1_250'
+  Structuring 'fa1_249'
+  Mapping 'fa1_249'
+  Structuring 'fa1_248'
+  Mapping 'fa1_248'
+  Structuring 'fa1_247'
+  Mapping 'fa1_247'
+  Structuring 'fa1_246'
+  Mapping 'fa1_246'
+  Structuring 'fa1_245'
+  Mapping 'fa1_245'
+  Structuring 'fa1_244'
+  Mapping 'fa1_244'
+  Structuring 'fa1_243'
+  Mapping 'fa1_243'
+  Structuring 'fa1_242'
+  Mapping 'fa1_242'
+  Structuring 'fa1_241'
+  Mapping 'fa1_241'
+  Structuring 'fa1_240'
+  Mapping 'fa1_240'
+  Structuring 'fa1_239'
+  Mapping 'fa1_239'
+  Structuring 'fa1_238'
+  Mapping 'fa1_238'
+  Structuring 'fa1_237'
+  Mapping 'fa1_237'
+  Structuring 'fa1_236'
+  Mapping 'fa1_236'
+  Structuring 'fa1_235'
+  Mapping 'fa1_235'
+  Structuring 'fa1_234'
+  Mapping 'fa1_234'
+  Structuring 'fa1_233'
+  Mapping 'fa1_233'
+  Structuring 'fa1_232'
+  Mapping 'fa1_232'
+  Structuring 'fa1_231'
+  Mapping 'fa1_231'
+  Structuring 'fa1_230'
+  Mapping 'fa1_230'
+  Structuring 'fa1_229'
+  Mapping 'fa1_229'
+  Structuring 'fa1_228'
+  Mapping 'fa1_228'
+  Structuring 'fa1_227'
+  Mapping 'fa1_227'
+  Structuring 'fa1_226'
+  Mapping 'fa1_226'
+  Structuring 'fa1_225'
+  Mapping 'fa1_225'
+  Structuring 'fa1_224'
+  Mapping 'fa1_224'
+  Structuring 'fa1_223'
+  Mapping 'fa1_223'
+  Structuring 'fa1_222'
+  Mapping 'fa1_222'
+  Structuring 'fa1_221'
+  Mapping 'fa1_221'
+  Structuring 'fa1_220'
+  Mapping 'fa1_220'
+  Structuring 'fa1_219'
+  Mapping 'fa1_219'
+  Structuring 'fa1_218'
+  Mapping 'fa1_218'
+  Structuring 'fa1_217'
+  Mapping 'fa1_217'
+  Structuring 'fa1_216'
+  Mapping 'fa1_216'
+  Structuring 'fa1_215'
+  Mapping 'fa1_215'
+  Structuring 'fa1_214'
+  Mapping 'fa1_214'
+  Structuring 'fa1_213'
+  Mapping 'fa1_213'
+  Structuring 'fa1_212'
+  Mapping 'fa1_212'
+  Structuring 'fa1_211'
+  Mapping 'fa1_211'
+  Structuring 'fa1_210'
+  Mapping 'fa1_210'
+  Structuring 'fa1_209'
+  Mapping 'fa1_209'
+  Structuring 'fa1_208'
+  Mapping 'fa1_208'
+  Structuring 'fa1_207'
+  Mapping 'fa1_207'
+  Structuring 'fa1_206'
+  Mapping 'fa1_206'
+  Structuring 'fa1_205'
+  Mapping 'fa1_205'
+  Structuring 'fa1_204'
+  Mapping 'fa1_204'
+  Structuring 'fa1_203'
+  Mapping 'fa1_203'
+  Structuring 'fa1_202'
+  Mapping 'fa1_202'
+  Structuring 'fa1_201'
+  Mapping 'fa1_201'
+  Structuring 'fa1_200'
+  Mapping 'fa1_200'
+  Structuring 'fa1_199'
+  Mapping 'fa1_199'
+  Structuring 'fa1_198'
+  Mapping 'fa1_198'
+  Structuring 'fa1_197'
+  Mapping 'fa1_197'
+  Structuring 'fa1_196'
+  Mapping 'fa1_196'
+  Structuring 'fa1_195'
+  Mapping 'fa1_195'
+  Structuring 'fa1_194'
+  Mapping 'fa1_194'
+  Structuring 'fa1_193'
+  Mapping 'fa1_193'
+  Structuring 'fa1_192'
+  Mapping 'fa1_192'
+  Structuring 'fa1_191'
+  Mapping 'fa1_191'
+  Structuring 'fa1_190'
+  Mapping 'fa1_190'
+  Structuring 'fa1_189'
+  Mapping 'fa1_189'
+  Structuring 'fa1_188'
+  Mapping 'fa1_188'
+  Structuring 'fa1_187'
+  Mapping 'fa1_187'
+  Structuring 'fa1_186'
+  Mapping 'fa1_186'
+  Structuring 'fa1_185'
+  Mapping 'fa1_185'
+  Structuring 'fa1_184'
+  Mapping 'fa1_184'
+  Structuring 'fa1_183'
+  Mapping 'fa1_183'
+  Structuring 'fa1_182'
+  Mapping 'fa1_182'
+  Structuring 'fa1_181'
+  Mapping 'fa1_181'
+  Structuring 'fa1_180'
+  Mapping 'fa1_180'
+  Structuring 'fa1_179'
+  Mapping 'fa1_179'
+  Structuring 'fa1_178'
+  Mapping 'fa1_178'
+  Structuring 'fa1_177'
+  Mapping 'fa1_177'
+  Structuring 'fa1_176'
+  Mapping 'fa1_176'
+  Structuring 'fa1_175'
+  Mapping 'fa1_175'
+  Structuring 'fa1_174'
+  Mapping 'fa1_174'
+  Structuring 'fa1_173'
+  Mapping 'fa1_173'
+  Structuring 'fa1_172'
+  Mapping 'fa1_172'
+  Structuring 'fa1_171'
+  Mapping 'fa1_171'
+  Structuring 'fa1_170'
+  Mapping 'fa1_170'
+  Structuring 'fa1_169'
+  Mapping 'fa1_169'
+  Structuring 'fa1_168'
+  Mapping 'fa1_168'
+  Structuring 'fa1_167'
+  Mapping 'fa1_167'
+  Structuring 'fa1_166'
+  Mapping 'fa1_166'
+  Structuring 'fa1_165'
+  Mapping 'fa1_165'
+  Structuring 'fa1_164'
+  Mapping 'fa1_164'
+  Structuring 'fa1_163'
+  Mapping 'fa1_163'
+  Structuring 'fa1_162'
+  Mapping 'fa1_162'
+  Structuring 'fa1_161'
+  Mapping 'fa1_161'
+  Structuring 'fa1_160'
+  Mapping 'fa1_160'
+  Structuring 'fa1_159'
+  Mapping 'fa1_159'
+  Structuring 'fa1_158'
+  Mapping 'fa1_158'
+  Structuring 'fa1_157'
+  Mapping 'fa1_157'
+  Structuring 'fa1_156'
+  Mapping 'fa1_156'
+  Structuring 'fa1_155'
+  Mapping 'fa1_155'
+  Structuring 'fa1_154'
+  Mapping 'fa1_154'
+  Structuring 'fa1_153'
+  Mapping 'fa1_153'
+  Structuring 'fa1_152'
+  Mapping 'fa1_152'
+  Structuring 'fa1_151'
+  Mapping 'fa1_151'
+  Structuring 'fa1_150'
+  Mapping 'fa1_150'
+  Structuring 'fa1_149'
+  Mapping 'fa1_149'
+  Structuring 'fa1_148'
+  Mapping 'fa1_148'
+  Structuring 'fa1_147'
+  Mapping 'fa1_147'
+  Structuring 'fa1_146'
+  Mapping 'fa1_146'
+  Structuring 'fa1_145'
+  Mapping 'fa1_145'
+  Structuring 'fa1_144'
+  Mapping 'fa1_144'
+  Structuring 'fa1_143'
+  Mapping 'fa1_143'
+  Structuring 'fa1_142'
+  Mapping 'fa1_142'
+  Structuring 'fa1_141'
+  Mapping 'fa1_141'
+  Structuring 'fa1_140'
+  Mapping 'fa1_140'
+  Structuring 'fa1_139'
+  Mapping 'fa1_139'
+  Structuring 'fa1_138'
+  Mapping 'fa1_138'
+  Structuring 'fa1_137'
+  Mapping 'fa1_137'
+  Structuring 'fa1_136'
+  Mapping 'fa1_136'
+  Structuring 'fa1_135'
+  Mapping 'fa1_135'
+  Structuring 'fa1_134'
+  Mapping 'fa1_134'
+  Structuring 'fa1_133'
+  Mapping 'fa1_133'
+  Structuring 'fa1_132'
+  Mapping 'fa1_132'
+  Structuring 'fa1_131'
+  Mapping 'fa1_131'
+  Structuring 'fa1_130'
+  Mapping 'fa1_130'
+  Structuring 'fa1_129'
+  Mapping 'fa1_129'
+  Structuring 'fa1_128'
+  Mapping 'fa1_128'
+  Structuring 'fa1_127'
+  Mapping 'fa1_127'
+  Structuring 'fa1_126'
+  Mapping 'fa1_126'
+  Structuring 'fa1_125'
+  Mapping 'fa1_125'
+  Structuring 'fa1_124'
+  Mapping 'fa1_124'
+  Structuring 'fa1_123'
+  Mapping 'fa1_123'
+  Structuring 'fa1_122'
+  Mapping 'fa1_122'
+  Structuring 'fa1_121'
+  Mapping 'fa1_121'
+  Structuring 'fa1_120'
+  Mapping 'fa1_120'
+  Structuring 'fa1_119'
+  Mapping 'fa1_119'
+  Structuring 'fa1_118'
+  Mapping 'fa1_118'
+  Structuring 'fa1_117'
+  Mapping 'fa1_117'
+  Structuring 'fa1_116'
+  Mapping 'fa1_116'
+  Structuring 'fa1_115'
+  Mapping 'fa1_115'
+  Structuring 'fa1_114'
+  Mapping 'fa1_114'
+  Structuring 'fa1_113'
+  Mapping 'fa1_113'
+  Structuring 'fa1_112'
+  Mapping 'fa1_112'
+  Structuring 'fa1_111'
+  Mapping 'fa1_111'
+  Structuring 'fa1_110'
+  Mapping 'fa1_110'
+  Structuring 'fa1_109'
+  Mapping 'fa1_109'
+  Structuring 'fa1_108'
+  Mapping 'fa1_108'
+  Structuring 'fa1_107'
+  Mapping 'fa1_107'
+  Structuring 'fa1_106'
+  Mapping 'fa1_106'
+  Structuring 'fa1_105'
+  Mapping 'fa1_105'
+  Structuring 'fa1_104'
+  Mapping 'fa1_104'
+  Structuring 'fa1_103'
+  Mapping 'fa1_103'
+  Structuring 'fa1_102'
+  Mapping 'fa1_102'
+  Structuring 'fa1_101'
+  Mapping 'fa1_101'
+  Structuring 'fa1_100'
+  Mapping 'fa1_100'
+  Structuring 'fa1_99'
+  Mapping 'fa1_99'
+  Structuring 'fa1_98'
+  Mapping 'fa1_98'
+  Structuring 'fa1_97'
+  Mapping 'fa1_97'
+  Structuring 'fa1_96'
+  Mapping 'fa1_96'
+  Structuring 'fa1_95'
+  Mapping 'fa1_95'
+  Structuring 'fa1_94'
+  Mapping 'fa1_94'
+  Structuring 'fa1_93'
+  Mapping 'fa1_93'
+  Structuring 'fa1_92'
+  Mapping 'fa1_92'
+  Structuring 'fa1_91'
+  Mapping 'fa1_91'
+  Structuring 'fa1_90'
+  Mapping 'fa1_90'
+  Structuring 'fa1_89'
+  Mapping 'fa1_89'
+  Structuring 'fa1_88'
+  Mapping 'fa1_88'
+  Structuring 'fa1_87'
+  Mapping 'fa1_87'
+  Structuring 'fa1_86'
+  Mapping 'fa1_86'
+  Structuring 'fa1_85'
+  Mapping 'fa1_85'
+  Structuring 'fa1_84'
+  Mapping 'fa1_84'
+  Structuring 'fa1_83'
+  Mapping 'fa1_83'
+  Structuring 'fa1_82'
+  Mapping 'fa1_82'
+  Structuring 'fa1_81'
+  Mapping 'fa1_81'
+  Structuring 'fa1_80'
+  Mapping 'fa1_80'
+  Structuring 'fa1_79'
+  Mapping 'fa1_79'
+  Structuring 'fa1_78'
+  Mapping 'fa1_78'
+  Structuring 'fa1_77'
+  Mapping 'fa1_77'
+  Structuring 'fa1_76'
+  Mapping 'fa1_76'
+  Structuring 'fa1_75'
+  Mapping 'fa1_75'
+  Structuring 'fa1_74'
+  Mapping 'fa1_74'
+  Structuring 'fa1_73'
+  Mapping 'fa1_73'
+  Structuring 'fa1_72'
+  Mapping 'fa1_72'
+  Structuring 'fa1_71'
+  Mapping 'fa1_71'
+  Structuring 'fa1_70'
+  Mapping 'fa1_70'
+  Structuring 'fa1_69'
+  Mapping 'fa1_69'
+  Structuring 'fa1_68'
+  Mapping 'fa1_68'
+  Structuring 'fa1_67'
+  Mapping 'fa1_67'
+  Structuring 'fa1_66'
+  Mapping 'fa1_66'
+  Structuring 'fa1_65'
+  Mapping 'fa1_65'
+  Structuring 'fa1_64'
+  Mapping 'fa1_64'
+  Structuring 'fa1_63'
+  Mapping 'fa1_63'
+  Structuring 'fa1_62'
+  Mapping 'fa1_62'
+  Structuring 'fa1_61'
+  Mapping 'fa1_61'
+  Structuring 'fa1_60'
+  Mapping 'fa1_60'
+  Structuring 'fa1_59'
+  Mapping 'fa1_59'
+  Structuring 'fa1_58'
+  Mapping 'fa1_58'
+  Structuring 'fa1_57'
+  Mapping 'fa1_57'
+  Structuring 'fa1_56'
+  Mapping 'fa1_56'
+  Structuring 'fa1_55'
+  Mapping 'fa1_55'
+  Structuring 'fa1_54'
+  Mapping 'fa1_54'
+  Structuring 'fa1_53'
+  Mapping 'fa1_53'
+  Structuring 'fa1_52'
+  Mapping 'fa1_52'
+  Structuring 'fa1_51'
+  Mapping 'fa1_51'
+  Structuring 'fa1_50'
+  Mapping 'fa1_50'
+  Structuring 'fa1_49'
+  Mapping 'fa1_49'
+  Structuring 'fa1_48'
+  Mapping 'fa1_48'
+  Structuring 'fa1_47'
+  Mapping 'fa1_47'
+  Structuring 'fa1_46'
+  Mapping 'fa1_46'
+  Structuring 'fa1_45'
+  Mapping 'fa1_45'
+  Structuring 'fa1_44'
+  Mapping 'fa1_44'
+  Structuring 'fa1_43'
+  Mapping 'fa1_43'
+  Structuring 'fa1_42'
+  Mapping 'fa1_42'
+  Structuring 'fa1_41'
+  Mapping 'fa1_41'
+  Structuring 'fa1_40'
+  Mapping 'fa1_40'
+  Structuring 'fa1_39'
+  Mapping 'fa1_39'
+  Structuring 'fa1_38'
+  Mapping 'fa1_38'
+  Structuring 'fa1_37'
+  Mapping 'fa1_37'
+  Structuring 'fa1_36'
+  Mapping 'fa1_36'
+  Structuring 'fa1_35'
+  Mapping 'fa1_35'
+  Structuring 'fa1_34'
+  Mapping 'fa1_34'
+  Structuring 'fa1_33'
+  Mapping 'fa1_33'
+  Structuring 'fa1_32'
+  Mapping 'fa1_32'
+  Structuring 'fa1_31'
+  Mapping 'fa1_31'
+  Structuring 'fa1_30'
+  Mapping 'fa1_30'
+  Structuring 'fa1_29'
+  Mapping 'fa1_29'
+  Structuring 'fa1_28'
+  Mapping 'fa1_28'
+  Structuring 'fa1_27'
+  Mapping 'fa1_27'
+  Structuring 'fa1_26'
+  Mapping 'fa1_26'
+  Structuring 'fa1_25'
+  Mapping 'fa1_25'
+  Structuring 'fa1_24'
+  Mapping 'fa1_24'
+  Structuring 'fa1_23'
+  Mapping 'fa1_23'
+  Structuring 'fa1_22'
+  Mapping 'fa1_22'
+  Structuring 'fa1_21'
+  Mapping 'fa1_21'
+  Structuring 'fa1_20'
+  Mapping 'fa1_20'
+  Structuring 'fa1_19'
+  Mapping 'fa1_19'
+  Structuring 'fa1_18'
+  Mapping 'fa1_18'
+  Structuring 'fa1_17'
+  Mapping 'fa1_17'
+  Structuring 'fa1_16'
+  Mapping 'fa1_16'
+  Structuring 'fa1_15'
+  Mapping 'fa1_15'
+  Structuring 'fa1_14'
+  Mapping 'fa1_14'
+  Structuring 'fa1_13'
+  Mapping 'fa1_13'
+  Structuring 'fa1_12'
+  Mapping 'fa1_12'
+  Structuring 'fa1_11'
+  Mapping 'fa1_11'
+  Structuring 'fa1_10'
+  Mapping 'fa1_10'
+  Structuring 'fa1_9'
+  Mapping 'fa1_9'
+  Structuring 'fa1_8'
+  Mapping 'fa1_8'
+  Structuring 'fa1_7'
+  Mapping 'fa1_7'
+  Structuring 'fa1_6'
+  Mapping 'fa1_6'
+  Structuring 'fa1_5'
+  Mapping 'fa1_5'
+  Structuring 'fa1_4'
+  Mapping 'fa1_4'
+  Structuring 'fa1_3'
+  Mapping 'fa1_3'
+  Structuring 'fa1_2'
+  Mapping 'fa1_2'
+  Structuring 'fa1_1'
+  Mapping 'fa1_1'
+  Structuring 'fa1_0'
+  Mapping 'fa1_0'
+  Structuring 'dovm'
+  Mapping 'dovm'
+  Structuring 'multi8x8_3'
+  Mapping 'multi8x8_3'
+  Structuring 'fa1_355'
+  Mapping 'fa1_355'
+  Structuring 'mux41'
+  Mapping 'mux41'
+  Structuring 'div'
+  Mapping 'div'
+  Structuring 'sub'
+  Mapping 'sub'
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:06    8908.8      0.00       0.0     255.6                          
+    0:00:06    8908.8      0.00       0.0     255.6                          
+    0:00:06    8908.8      0.00       0.0     255.6                          
+    0:00:06    8908.8      0.00       0.0     255.6                          
+    0:00:06    8908.8      0.00       0.0     255.6                          
+    0:00:07    8603.8      0.00       0.0     255.5                          
+    0:00:07    8603.8      0.00       0.0     255.5                          
+    0:00:07    8603.8      0.00       0.0     255.5                          
+    0:00:07    8603.8      0.00       0.0     255.5                          
+    0:00:07    8603.8      0.00       0.0     255.5                          
+    0:00:07    8619.5      0.00       0.0     177.9                          
+    0:00:07    8623.4      0.00       0.0     139.6                          
+    0:00:07    8629.7      0.00       0.0     100.0                          
+    0:00:07    8635.8      0.00       0.0      74.8                          
+    0:00:07    8636.6      0.00       0.0      57.0                          
+    0:00:07    8637.3      0.00       0.0      39.2                          
+    0:00:07    8639.1      0.00       0.0      29.1                          
+    0:00:07    8640.9      0.00       0.0      19.1                          
+    0:00:07    8642.7      0.00       0.0      10.0                          
+    0:00:07    8642.7      0.00       0.0      10.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:07    8642.7      0.00       0.0      10.0                          
+    0:00:07    8642.7      0.00       0.0      10.0                          
+    0:00:07    8642.7      0.00       0.0      10.0                          
+
+
+  Beginning Design Rule Fixing  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:07    8642.7      0.00       0.0      10.0                          
+    0:00:07    8649.0      0.00       0.0       0.0                          
+
+
+  Beginning Area-Recovery Phase  (max_area 0)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:07    8649.0      0.00       0.0       0.0                          
+    0:00:07    8649.0      0.00       0.0       0.0                          
+    0:00:07    8628.7      0.00       0.0       0.0                          
+    0:00:07    8626.2      0.00       0.0       0.0                          
+    0:00:07    8624.9      0.00       0.0       0.0                          
+    0:00:07    8623.6      0.00       0.0       0.0                          
+    0:00:07    8621.8      0.00       0.0       0.0                          
+    0:00:07    8621.8      0.00       0.0       0.0                          
+    0:00:07    8621.8      0.00       0.0       0.0                          
+    0:00:07    8621.3      0.00       0.0       0.0                          
+    0:00:07    8621.3      0.00       0.0       0.0                          
+    0:00:07    8621.3      0.00       0.0       0.0                          
+    0:00:07    8621.3      0.00       0.0       0.0                          
+    0:00:07    8621.3      0.00       0.0       0.0                          
+    0:00:07    8621.3      0.00       0.0       0.0                          
+    0:00:07    8616.2      0.00       0.0       0.0                          
+    0:00:07    8616.2      0.00       0.0       0.0                          
+    0:00:07    8616.2      0.00       0.0       0.0                          
+    0:00:07    8616.2      0.00       0.0       0.0                          
+    0:00:07    8616.2      0.00       0.0       0.0                          
+    0:00:07    8616.2      0.00       0.0       0.0                          
+Loading db file '/home/KNUEEhdd1/comp311/comp9/work1/proj1/dc/saed32hvt_ff0p95v125c.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+1
+write -f verilog $currentDesign -hierarchy -output $currentDesign.syn.v
+Writing verilog file '/home/KNUEEhdd1/comp311/comp9/work1/proj1/dc/ALU.syn.v'.
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+Warning: Verilog writer has added 72 nets to module mul using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+1
+write_sdc $currentDesign.sdc
+1
+report_qor
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : qor
+Design : ALU
+Version: O-2018.06-SP4
+Date   : Wed May  4 12:46:10 2022
+****************************************
+
+
+  Timing Path Group (none)
+  -----------------------------------
+  Levels of Logic:             283.00
+  Critical Path Length:        686.41
+  Critical Path Slack:         uninit
+  Critical Path Clk Period:       n/a
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+
+  Cell Count
+  -----------------------------------
+  Hierarchical Cell Count:        419
+  Hierarchical Port Count:       4446
+  Leaf Cell Count:               2881
+  Buf/Inv Cell Count:             360
+  Buf Cell Count:                   0
+  Inv Cell Count:                 360
+  CT Buf/Inv Cell Count:            0
+  Combinational Cell Count:      2881
+  Sequential Cell Count:            0
+  Macro Count:                      0
+  -----------------------------------
+
+
+  Area
+  -----------------------------------
+  Combinational Area:     8616.244007
+  Noncombinational Area:     0.000000
+  Buf/Inv Area:            464.829377
+  Total Buffer Area:             0.00
+  Total Inverter Area:         464.83
+  Macro/Black Box Area:      0.000000
+  Net Area:               1796.885155
+  -----------------------------------
+  Cell Area:              8616.244007
+  Design Area:           10413.129161
+
+
+  Design Rules
+  -----------------------------------
+  Total Number of Nets:          3137
+  Nets With Violations:             0
+  Max Trans Violations:             0
+  Max Cap Violations:               0
+  -----------------------------------
+
+
+  Hostname: knuee-srv2
+
+  Compile CPU Statistics
+  -----------------------------------------
+  Resource Sharing:                    2.76
+  Logic Optimization:                  2.90
+  Mapping Optimization:                2.57
+  -----------------------------------------
+  Overall Compile Time:               10.06
+  Overall Compile Wall Clock Time:     7.67
+
+  --------------------------------------------------------------------
+
+  Design  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
+
+
+  Design (Hold)  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
+
+  --------------------------------------------------------------------
+
+
+1
+exit
+
+Thank you...

@@ -1,0 +1,772 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+                Version O-2018.06-SP4 for linux64 - Nov 27, 2018
+
+                    Copyright (c) 1988 - 2018 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+            or distribution of this software is strictly prohibited.
+Initializing...
+set currentDesign MIPS16
+MIPS16
+set sourceFolder  {rtl}
+rtl
+#Need not touch from here
+set tmpStr ./saed32hvt_ff0p95v125c.db
+./saed32hvt_ff0p95v125c.db
+set target_library $tmpStr
+./saed32hvt_ff0p95v125c.db
+set link_library "* $target_library"
+* ./saed32hvt_ff0p95v125c.db
+analyze $sourceFolder -autoread -recursive -top $currentDesign
+== ANALYZE autoread for top design 'MIPS16' ==
+
+Starting ANALYZE autoread mode...
+Information: Adding '/home/KNUEEhdd1/comp311/comp9/work/proj1/dc/rtl'.  (AUTOREAD-100)
+Warning: Adding missing directory to search_path - '/home/KNUEEhdd1/comp311/comp9/work/proj1/dc/rtl'. (AUTOREAD-105)
+Information: Adding '/home/KNUEEhdd1/comp311/comp9/work/proj1/dc/rtl/MIPS16.v'.  (AUTOREAD-100)
+Information: Adding '/home/KNUEEhdd1/comp311/comp9/work/proj1/dc/rtl/instr.v'.  (AUTOREAD-100)
+Information: Adding '/home/KNUEEhdd1/comp311/comp9/work/proj1/dc/rtl/data.v'.  (AUTOREAD-100)
+Information: Adding '/home/KNUEEhdd1/comp311/comp9/work/proj1/dc/rtl/modules.v'.  (AUTOREAD-100)
+Information: Scanning file { MIPS16.v }. (AUTOREAD-303)
+Information: Scanning file { instr.v }. (AUTOREAD-303)
+Information: Scanning file { data.v }. (AUTOREAD-303)
+Information: Scanning file { modules.v }. (AUTOREAD-303)
+Compiling source file /home/KNUEEhdd1/comp311/comp9/work/proj1/dc/rtl/modules.v
+Presto compilation completed successfully.
+Compiling source file /home/KNUEEhdd1/comp311/comp9/work/proj1/dc/rtl/instr.v
+Presto compilation completed successfully.
+Compiling source file /home/KNUEEhdd1/comp311/comp9/work/proj1/dc/rtl/data.v
+Presto compilation completed successfully.
+Compiling source file /home/KNUEEhdd1/comp311/comp9/work/proj1/dc/rtl/MIPS16.v
+Presto compilation completed successfully.
+Autoread command completed successfully.
+1
+elaborate     $currentDesign
+Loading db file '/home/KNUEEhdd1/comp311/comp9/work/proj1/dc/saed32hvt_ff0p95v125c.db'
+Loading db file '/usr/synopsys/syn/O-2018.06-SP4/libraries/syn/gtech.db'
+Loading db file '/usr/synopsys/syn/O-2018.06-SP4/libraries/syn/standard.sldb'
+  Loading link library 'saed32hvt_ff0p95v125c'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Presto compilation completed successfully.
+Elaborated 1 design.
+Current design is now 'MIPS16'.
+Information: Building the design 'PC_Reg'. (HDL-193)
+
+Inferred memory devices in process
+	in routine PC_Reg line 18 in file
+		'/home/KNUEEhdd1/comp311/comp9/work/proj1/dc/rtl/modules.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     PC_out_reg      | Flip-flop |  13   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'inst_mem'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'data_Memory'. (HDL-193)
+
+Inferred memory devices in process
+	in routine data_Memory line 7 in file
+		'/home/KNUEEhdd1/comp311/comp9/work/proj1/dc/rtl/data.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|  internal_mem_reg   | Flip-flop |  384  |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Information: Building the design 'add' instantiated from design 'MIPS16' with
+	the parameters "13". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'and_gate'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'rf'. (HDL-193)
+
+Inferred memory devices in process
+	in routine rf line 4 in file
+		'/home/KNUEEhdd1/comp311/comp9/work/proj1/dc/rtl/modules.v'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+| internal_memory_reg | Flip-flop |  128  |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Statistics for MUX_OPs
+======================================================
+| block name/line  | Inputs | Outputs | # sel inputs |
+======================================================
+|      rf/13       |   8    |   16    |      3       |
+|      rf/14       |   8    |   16    |      3       |
+======================================================
+Presto compilation completed successfully.
+Information: Building the design 'control'. (HDL-193)
+
+Statistics for case statements in always block at line 29 in file
+	'/home/KNUEEhdd1/comp311/comp9/work/proj1/dc/rtl/modules.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            35            |    auto/auto     |
+===============================================
+Presto compilation completed successfully.
+Information: Building the design 'sign_extend'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'ALUControl'. (HDL-193)
+
+Statistics for case statements in always block at line 76 in file
+	'/home/KNUEEhdd1/comp311/comp9/work/proj1/dc/rtl/modules.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            77            |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine ALUControl line 76 in file
+		'/home/KNUEEhdd1/comp311/comp9/work/proj1/dc/rtl/modules.v'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|   ALU_Control_reg   | Latch |   3   |  Y  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+Presto compilation completed successfully.
+Information: Building the design 'alu'. (HDL-193)
+
+Statistics for case statements in always block at line 88 in file
+	'/home/KNUEEhdd1/comp311/comp9/work/proj1/dc/rtl/modules.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            89            |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine alu line 88 in file
+		'/home/KNUEEhdd1/comp311/comp9/work/proj1/dc/rtl/modules.v'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|     result_reg      | Latch |  16   |  Y  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+Presto compilation completed successfully.
+Information: Building the design 'JR_Control'. (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'mux3X1' instantiated from design 'MIPS16' with
+	the parameters "3". (HDL-193)
+
+Statistics for case statements in always block at line 128 in file
+	'/home/KNUEEhdd1/comp311/comp9/work/proj1/dc/rtl/modules.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           129            |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine mux3X1_data3 line 128 in file
+		'/home/KNUEEhdd1/comp311/comp9/work/proj1/dc/rtl/modules.v'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|      out0_reg       | Latch |   3   |  Y  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+Presto compilation completed successfully.
+Information: Building the design 'mux2X1' instantiated from design 'MIPS16' with
+	the parameters "16". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'mux2X1' instantiated from design 'MIPS16' with
+	the parameters "13". (HDL-193)
+Presto compilation completed successfully.
+Information: Building the design 'mux3X1' instantiated from design 'MIPS16' with
+	the parameters "16". (HDL-193)
+
+Statistics for case statements in always block at line 128 in file
+	'/home/KNUEEhdd1/comp311/comp9/work/proj1/dc/rtl/modules.v'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|           129            |     no/auto      |
+===============================================
+
+Inferred memory devices in process
+	in routine mux3X1_data16 line 128 in file
+		'/home/KNUEEhdd1/comp311/comp9/work/proj1/dc/rtl/modules.v'.
+===========================================================================
+|    Register Name    | Type  | Width | Bus | MB | AR | AS | SR | SS | ST |
+===========================================================================
+|      out0_reg       | Latch |  16   |  Y  | N  | N  | N  | -  | -  | -  |
+===========================================================================
+Presto compilation completed successfully.
+1
+current_design $currentDesign
+Current design is 'MIPS16'.
+{MIPS16}
+#setting clock
+set clockPorts {clk}
+clk
+create_clock -name myCLK $clockPorts -period 2.0 -waveform {0 1.0}
+1
+#Common options
+set_max_area 0
+1
+set_host_options -max_cores 4
+1
+#uniquify
+compile
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | O-2018.06-DWBB_201806.4 |     *     |
+| Licensed DW Building Blocks        |                         |           |
+============================================================================
+
+
+Information: There are 79 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'mux2X1_data16_0'
+  Processing 'mux3X1_data16'
+  Processing 'mux2X1_data13_0'
+  Processing 'mux3X1_data3'
+  Processing 'add_data13_0'
+  Processing 'JR_Control'
+  Processing 'alu'
+  Processing 'ALUControl'
+  Processing 'sign_extend'
+  Processing 'control'
+  Processing 'rf'
+  Processing 'and_gate'
+  Processing 'data_Memory'
+  Processing 'inst_mem'
+  Processing 'PC_Reg'
+  Processing 'MIPS16'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'add_data13_1_DW01_add_0'
+  Processing 'alu_DW01_cmp2_0'
+  Processing 'alu_DW_div_uns_0'
+  Processing 'alu_DW01_sub_0'
+  Processing 'alu_DW01_add_0'
+  Processing 'add_data13_0_DW01_add_0'
+  Processing 'inst_mem_DW01_cmp2_0'
+  Processing 'PC_Reg_DW01_cmp2_0'
+  Processing 'alu_DW02_mult_0'
+  Processing 'alu_DW01_add_1'
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+  Mapping Optimization (Phase 1)
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:07   19459.8     12.07    4621.1      38.1                          
+    0:00:07   19459.8     12.23    4754.1      38.1                          
+    0:00:07   19459.8     12.23    4754.1      38.1                          
+    0:00:07   19459.8     12.23    4754.1      38.1                          
+    0:00:07   19459.8     12.23    4754.1      38.1                          
+    0:00:08   11489.6     12.25    4492.5      15.7                          
+    0:00:08   11499.5     11.01    4189.4      22.5                          
+    0:00:08   11514.8     11.01    4008.5      22.5                          
+    0:00:08   11523.1     11.01    4020.7      22.5                          
+    0:00:08   11525.7     11.01    4003.6      22.5                          
+    0:00:08   11516.5     11.01    3976.5      22.5                          
+    0:00:08   11517.8     11.01    3973.6      22.5                          
+    0:00:09   11517.8     11.01    3973.6      22.5                          
+    0:00:09   11517.8     11.01    3973.6      22.5                          
+    0:00:09   11517.8     11.01    3973.6      22.5                          
+    0:00:09   11517.8     11.01    3973.6      22.5                          
+    0:00:09   11525.7     11.01    3973.6       5.0                          
+    0:00:09   11526.4     11.01    3973.6       2.8                          
+    0:00:09   11525.9     11.01    3973.6       1.5                          
+    0:00:09   11526.2     11.01    3973.5       0.8                          
+    0:00:09   11527.0     11.01    3973.5       0.0                          
+    0:00:09   11527.0     11.01    3973.5       0.0                          
+    0:00:09   11527.0     11.01    3973.5       0.0                          
+    0:00:09   11527.0     11.01    3973.5       0.0                          
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:09   11527.0     11.01    3973.5       0.0                          
+    0:00:09   11553.6     10.73    3953.4       0.0 PC/PC_out_reg[9]/RSTB    
+    0:00:09   11575.8     10.67    3953.4       0.0 PC/PC_out_reg[9]/RSTB    
+    0:00:09   11581.3     10.63    3843.6       0.0 PC/PC_out_reg[9]/RSTB    
+    0:00:09   11589.5     10.50    3843.0       0.0 PC/PC_out_reg[9]/RSTB    
+    0:00:09   11625.3     10.44    3843.0       0.0 PC/PC_out_reg[9]/RSTB    
+    0:00:10   11658.9     10.34    3841.2       0.0 PC/PC_out_reg[9]/RSTB    
+    0:00:10   11681.5      9.13    3836.5       0.0 PC/PC_out_reg[9]/RSTB    
+    0:00:10   11695.2      9.08    3839.3       0.0 PC/PC_out_reg[10]/RSTB   
+    0:00:10   11700.8      9.06    3839.2       0.0 PC/PC_out_reg[10]/RSTB   
+    0:00:10   11714.5      9.05    3839.9       0.0 PC/PC_out_reg[10]/RSTB   
+    0:00:10   11743.7      7.61    3778.6       0.0 data_memory/internal_mem_reg[0][2]/D
+    0:00:11   11744.8      7.28    3532.9       0.0 PC/PC_out_reg[12]/RSTB   
+    0:00:11   11733.8      7.24    3534.9       0.0 PC/PC_out_reg[12]/RSTB   
+    0:00:11   11736.1      7.23    3534.8       0.0 PC/PC_out_reg[12]/RSTB   
+    0:00:11   11746.5      7.13    3502.5       0.0 PC/PC_out_reg[12]/RSTB   
+    0:00:11   11812.6      6.91    3387.4       0.0 data_memory/internal_mem_reg[0][2]/D
+    0:00:11   11857.9      6.48    3218.8       0.0 data_memory/internal_mem_reg[0][3]/D
+    0:00:11   11880.2      6.36    3130.3       0.0 data_memory/internal_mem_reg[0][3]/D
+    0:00:12   11912.5      5.63    2740.9       0.0 data_memory/internal_mem_reg[0][7]/D
+    0:00:12   11933.8      5.61    2676.8       0.0 data_memory/internal_mem_reg[0][10]/D
+    0:00:12   11947.3      5.37    2549.6       0.0 data_memory/internal_mem_reg[0][8]/D
+    0:00:12   11949.3      5.18    2434.7       0.0 data_memory/internal_mem_reg[0][8]/D
+    0:00:12   12065.7      5.09    2379.0       0.0 data_memory/internal_mem_reg[0][3]/D
+    0:00:13   12067.0      5.09    2377.6       0.0 data_memory/internal_mem_reg[0][3]/D
+    0:00:13   12074.1      4.96    2344.4       0.0 data_memory/internal_mem_reg[0][8]/D
+    0:00:13   12103.4      4.91    2263.4       0.0 data_memory/internal_mem_reg[0][8]/D
+    0:00:13   12126.0      4.90    2039.6       0.0 data_memory/internal_mem_reg[0][14]/D
+    0:00:13   12168.4      4.90    1822.7       0.0 data_memory/internal_mem_reg[0][9]/D
+    0:00:13   12193.8      4.82    1713.2       0.0 data_memory/internal_mem_reg[0][0]/D
+    0:00:14   12228.4      3.99    1586.9       0.0 data_memory/internal_mem_reg[13][4]/D
+    0:00:14   12294.2      3.45    1473.3       0.0 register_file/internal_memory_reg[6][13]/D
+    0:00:14   12325.2      3.03    1420.2       0.0 data_memory/internal_mem_reg[15][4]/D
+    0:00:14   12337.4      3.02    1416.1       0.0 data_memory/internal_mem_reg[11][0]/D
+    0:00:14   12345.6      2.88    1305.9       0.0 register_file/internal_memory_reg[6][4]/D
+    0:00:15   12353.4      2.85    1304.1       0.0 register_file/internal_memory_reg[7][0]/D
+    0:00:15   12363.9      2.85    1298.2       0.0 register_file/internal_memory_reg[3][0]/D
+    0:00:15   12384.7      2.65    1280.1       0.0 register_file/internal_memory_reg[1][0]/D
+    0:00:15   12395.4      2.60    1264.9       0.0 register_file/internal_memory_reg[6][4]/D
+    0:00:15   12397.4      2.58    1257.1       0.0 register_file/internal_memory_reg[6][4]/D
+    0:00:15   12407.6      2.57    1252.1       0.0 register_file/internal_memory_reg[2][0]/D
+    0:00:16   12416.0      2.53    1244.7       0.0 data_memory/internal_mem_reg[12][0]/D
+    0:00:16   12457.1      2.50    1230.6       0.0 register_file/internal_memory_reg[6][4]/D
+    0:00:16   12465.0      2.49    1220.8       0.0 register_file/internal_memory_reg[0][3]/D
+    0:00:16   12467.3      2.44    1205.1       0.0 data_memory/internal_mem_reg[18][0]/D
+    0:00:16   12475.9      2.39    1193.4       0.0 register_file/internal_memory_reg[0][3]/D
+    0:00:16   12493.0      2.37    1184.9       0.0 data_memory/internal_mem_reg[12][0]/D
+    0:00:17   12500.3      2.33    1175.6       0.0 data_memory/internal_mem_reg[14][2]/D
+    0:00:17   12540.2      2.32    1159.4       0.0 data_memory/internal_mem_reg[18][4]/D
+    0:00:17   12579.6      2.32    1145.2       0.0 data_memory/internal_mem_reg[21][4]/D
+    0:00:17   12629.2      2.30    1128.6       0.0 data_memory/internal_mem_reg[9][4]/D
+    0:00:17   12653.6      2.26    1106.6       0.0 register_file/internal_memory_reg[6][7]/D
+    0:00:17   12666.0      2.25    1099.5       0.0 register_file/internal_memory_reg[6][7]/D
+    0:00:18   12679.5      2.24    1097.4       0.0 register_file/internal_memory_reg[6][7]/D
+    0:00:18   12683.1      2.23    1097.1       0.0 register_file/internal_memory_reg[0][12]/D
+    0:00:18   12681.8      2.22    1094.0       0.0 register_file/internal_memory_reg[6][7]/D
+    0:00:18   12687.1      2.21    1092.4       0.0 register_file/internal_memory_reg[0][12]/D
+    0:00:18   12699.6      2.21    1091.2       0.0 register_file/internal_memory_reg[0][12]/D
+    0:00:18   12727.3      2.20    1091.3       0.0 register_file/internal_memory_reg[6][7]/D
+    0:00:19   12732.6      2.20    1089.0       0.0                          
+    0:00:20   12685.3      2.20    1081.1       0.0                          
+    0:00:20   12688.6      2.19    1080.1       0.0 register_file/internal_memory_reg[6][7]/D
+    0:00:20   12703.6      2.18    1074.6       0.0 register_file/internal_memory_reg[0][12]/D
+    0:00:20   12709.2      2.18    1067.2       0.0 register_file/internal_memory_reg[0][15]/D
+    0:00:20   12710.8      2.18    1059.2       0.0 register_file/internal_memory_reg[0][3]/D
+    0:00:20   12714.8      2.18    1054.8       0.0 register_file/internal_memory_reg[0][9]/D
+    0:00:21   12726.3      2.17    1049.7       0.0 register_file/internal_memory_reg[6][7]/D
+    0:00:21   12738.7      2.13    1041.9       0.0 data_memory/internal_mem_reg[0][4]/D
+    0:00:21   12750.2      2.12    1035.5       0.0 data_memory/internal_mem_reg[3][0]/D
+    0:00:21   12774.5      2.04    1014.5       0.0 data_memory/internal_mem_reg[19][8]/D
+    0:00:21   12775.3      2.04    1010.7       0.0 data_memory/internal_mem_reg[12][12]/D
+    0:00:22   12847.5      2.03    1008.1       0.0 data_memory/internal_mem_reg[0][9]/D
+    0:00:22   12883.6      1.99     985.7       0.0 data_memory/internal_mem_reg[5][0]/D
+    0:00:22   12930.8      1.98     977.1       0.0 register_file/internal_memory_reg[6][7]/D
+    0:00:22   12935.2      1.90     933.5       0.0 register_file/internal_memory_reg[6][7]/D
+    0:00:22   12942.8      1.86     929.8       0.0 data_memory/internal_mem_reg[0][4]/D
+    0:00:22   12949.4      1.83     923.6       0.0 data_memory/internal_mem_reg[0][4]/D
+    0:00:22   12988.3      1.81     893.2       0.0 data_memory/internal_mem_reg[12][14]/D
+    0:00:23   13016.7      1.78     889.4       0.0 data_memory/internal_mem_reg[0][7]/D
+    0:00:23   13022.1      1.73     874.8       0.0 data_memory/internal_mem_reg[22][12]/D
+    0:00:23   13029.2      1.73     872.2       0.0 data_memory/internal_mem_reg[18][12]/D
+    0:00:23   13041.7      1.71     864.3       0.0 register_file/internal_memory_reg[1][9]/D
+    0:00:23   13054.6      1.71     860.5       0.0 register_file/internal_memory_reg[6][7]/D
+    0:00:24   13061.2      1.69     854.7       0.0 data_memory/internal_mem_reg[19][8]/D
+    0:00:24   13081.6      1.69     844.9       0.0 register_file/internal_memory_reg[6][7]/D
+    0:00:24   13108.2      1.68     841.1       0.0 data_memory/internal_mem_reg[0][7]/D
+    0:00:24   13113.6      1.68     836.1       0.0 data_memory/internal_mem_reg[19][0]/D
+    0:00:24   13093.8      1.65     827.5       0.0 register_file/internal_memory_reg[6][7]/D
+    0:00:24   13139.5      1.64     824.3       0.0 data_memory/internal_mem_reg[0][5]/D
+    0:00:24   13132.6      1.64     821.0       0.0 data_memory/internal_mem_reg[12][15]/D
+    0:00:25   13125.5      1.63     820.8       0.0 data_memory/internal_mem_reg[0][1]/D
+    0:00:25   13129.3      1.62     807.6       0.0 register_file/internal_memory_reg[6][0]/D
+    0:00:25   13130.3      1.58     778.4       0.0 data_memory/internal_mem_reg[12][15]/D
+    0:00:25   13130.3      1.54     774.8       0.0 data_memory/internal_mem_reg[0][1]/D
+    0:00:25   13121.5      1.54     769.3       0.0 register_file/internal_memory_reg[6][7]/D
+    0:00:25   13131.1      1.52     764.6       0.0 data_memory/internal_mem_reg[0][5]/D
+    0:00:25   13121.7      1.51     756.0       0.0 data_memory/internal_mem_reg[12][8]/D
+    0:00:25   13128.3      1.51     753.7       0.0 register_file/internal_memory_reg[6][7]/D
+    0:00:26   13142.0      1.48     738.5       0.0 register_file/internal_memory_reg[6][7]/D
+    0:00:26   13146.6      1.47     736.1       0.0 register_file/internal_memory_reg[6][7]/D
+    0:00:26   13153.2      1.47     725.3       0.0 register_file/internal_memory_reg[6][7]/D
+    0:00:26   13161.6      1.46     721.7       0.0 data_memory/internal_mem_reg[12][13]/D
+    0:00:26   13172.8      1.45     718.2       0.0 data_memory/internal_mem_reg[0][7]/D
+    0:00:26   13183.5      1.44     714.3       0.0 data_memory/internal_mem_reg[12][13]/D
+    0:00:26   13209.4      1.43     709.1       0.0 register_file/internal_memory_reg[6][7]/D
+    0:00:26   13217.8      1.43     705.2       0.0 register_file/internal_memory_reg[6][7]/D
+    0:00:26   13224.4      1.43     703.1       0.0 data_memory/internal_mem_reg[7][13]/D
+    0:00:27   13215.5      1.42     702.2       0.0 register_file/internal_memory_reg[6][7]/D
+    0:00:27   13219.6      1.42     698.6       0.0 data_memory/internal_mem_reg[0][3]/D
+    0:00:27   13229.7      1.42     697.1       0.0 data_memory/internal_mem_reg[0][7]/D
+    0:00:27   13229.2      1.42     696.7       0.0                          
+    0:00:28   13232.0      1.42     694.4       0.0                          
+    0:00:28   13241.2      1.42     686.4       0.0                          
+    0:00:28   13247.0      1.42     683.1       0.0                          
+    0:00:28   13255.6      1.42     679.1       0.0                          
+    0:00:28   13261.2      1.42     677.9       0.0                          
+    0:00:28   13275.2      1.42     676.9       0.0                          
+    0:00:28   13271.1      1.42     675.6       0.0                          
+    0:00:28   13264.0      1.42     673.2       0.0                          
+    0:00:29   13256.9      1.42     672.5       0.0                          
+    0:00:29   13257.7      1.42     671.7       0.0                          
+    0:00:29   13262.8      1.42     670.1       0.0                          
+    0:00:29   13254.6      1.42     668.7       0.0                          
+    0:00:29   13271.1      1.42     663.5       0.0                          
+    0:00:29   13263.5      1.42     661.9       0.0                          
+    0:00:29   13281.8      1.42     659.5       0.0                          
+    0:00:29   13294.8      1.42     656.5       0.0                          
+    0:00:29   13293.5      1.42     655.5       0.0                          
+    0:00:30   13282.3      1.42     654.3       0.0                          
+    0:00:30   13287.4      1.42     652.3       0.0                          
+    0:00:30   13300.4      1.42     649.7       0.0                          
+    0:00:30   13314.9      1.42     649.1       0.0                          
+    0:00:30   13308.5      1.42     647.8       0.0                          
+    0:00:30   13321.2      1.42     645.9       0.0                          
+    0:00:30   13321.5      1.42     644.7       0.0                          
+    0:00:30   13323.5      1.42     643.3       0.0                          
+    0:00:30   13334.7      1.42     642.2       0.0                          
+    0:00:30   13345.4      1.42     639.8       0.0                          
+    0:00:30   13364.4      1.42     638.7       0.0                          
+    0:00:31   13402.3      1.42     635.7       0.0                          
+    0:00:31   13410.2      1.42     634.4       0.0                          
+    0:00:31   13437.9      1.42     632.1       0.0                          
+    0:00:31   13425.9      1.42     622.5       0.0                          
+    0:00:31   13417.8      1.42     621.1       0.0                          
+    0:00:31   13416.3      1.42     620.1       0.0                          
+    0:00:31   13401.5      1.42     618.1       0.0                          
+    0:00:31   13409.7      1.42     616.3       0.0                          
+    0:00:31   13418.8      1.42     615.1       0.0                          
+    0:00:32   13466.1      1.42     612.4       0.0                          
+    0:00:32   13469.1      1.42     609.8       0.0                          
+    0:00:32   13477.3      1.42     608.9       0.0                          
+    0:00:32   13486.9      1.42     608.2       0.0                          
+    0:00:32   13489.5      1.42     607.8       0.0                          
+    0:00:32   13491.5      1.42     607.3       0.0                          
+    0:00:32   13494.3      1.42     606.3       0.0                          
+    0:00:32   13505.2      1.42     604.9       0.0                          
+    0:00:32   13495.6      1.42     604.2       0.0                          
+    0:00:32   13497.3      1.42     604.2       0.0                          
+    0:00:33   13540.0      1.42     602.7       0.0                          
+    0:00:33   13542.6      1.42     602.6       0.0                          
+
+
+  Beginning Area-Recovery Phase  (max_area 0)
+  -----------------------------
+
+                                  TOTAL                                      
+   ELAPSED            WORST NEG   SETUP    DESIGN                            
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:33   13542.6      1.42     602.6       0.0                          
+    0:00:33   13542.6      1.42     602.6       0.0                          
+    0:00:33   13370.8      1.42     598.1       0.0                          
+    0:00:33   13335.2      1.42     598.1       0.0                          
+    0:00:33   13316.9      1.42     598.1       0.0                          
+    0:00:33   13313.1      1.42     598.1       0.0                          
+    0:00:33   13311.8      1.42     598.1       0.0                          
+    0:00:33   13310.5      1.42     598.1       0.0                          
+    0:00:33   13309.3      1.42     598.1       0.0                          
+    0:00:33   13308.0      1.42     598.1       0.0                          
+    0:00:33   13306.7      1.42     598.1       0.0                          
+    0:00:33   13305.5      1.42     598.1       0.0                          
+    0:00:33   13304.2      1.42     598.1       0.0                          
+    0:00:33   13302.9      1.42     598.1       0.0                          
+    0:00:33   13301.6      1.42     598.1       0.0                          
+    0:00:33   13300.4      1.42     598.1       0.0                          
+    0:00:33   13299.1      1.42     598.1       0.0                          
+    0:00:33   13297.8      1.42     598.1       0.0                          
+    0:00:33   13297.8      1.42     598.1       0.0                          
+    0:00:34   13297.8      1.42     598.1       0.0                          
+    0:00:34   12926.0      1.41     597.5       0.0                          
+    0:00:34   12891.7      1.41     596.9       0.0                          
+    0:00:34   12890.4      1.41     596.9       0.0                          
+    0:00:34   12890.4      1.41     596.9       0.0                          
+    0:00:34   12890.4      1.41     596.9       0.0                          
+    0:00:34   12890.4      1.41     596.9       0.0                          
+    0:00:34   12890.4      1.41     596.9       0.0                          
+    0:00:34   12890.4      1.41     596.9       0.0                          
+    0:00:34   12891.7      1.32     595.4       0.0 register_file/internal_memory_reg[6][0]/D
+    0:00:34   12898.1      1.29     590.3       0.0 data_memory/internal_mem_reg[13][7]/D
+    0:00:34   12909.0      1.28     590.0       0.0 data_memory/internal_mem_reg[12][5]/D
+    0:00:34   12916.6      1.26     588.5       0.0 data_memory/internal_mem_reg[13][7]/D
+    0:00:34   12923.0      1.24     579.2       0.0 data_memory/internal_mem_reg[13][4]/SETB
+    0:00:34   12963.4      1.21     575.6       0.0 data_memory/internal_mem_reg[21][1]/D
+    0:00:34   12975.3      1.20     572.2       0.0 data_memory/internal_mem_reg[13][7]/D
+    0:00:35   12985.2      1.19     568.7       0.0 data_memory/internal_mem_reg[9][1]/D
+    0:00:35   12990.3      1.18     568.2       0.0 PC/PC_out_reg[12]/RSTB   
+    0:00:35   12997.2      1.18     567.1       0.0 data_memory/internal_mem_reg[13][7]/D
+    0:00:35   13001.2      1.17     566.4       0.0 data_memory/internal_mem_reg[7][11]/D
+    0:00:35   13024.1      1.16     562.9       0.0 data_memory/internal_mem_reg[18][9]/D
+    0:00:35   13030.2      1.16     560.4       0.0 register_file/internal_memory_reg[6][3]/D
+    0:00:35   13039.6      1.16     559.5       0.0 data_memory/internal_mem_reg[2][7]/D
+    0:00:35   13044.4      1.15     556.5       0.0 register_file/internal_memory_reg[6][3]/D
+    0:00:36   13056.6      1.13     546.1       0.0 data_memory/internal_mem_reg[18][9]/D
+    0:00:36   13061.7      1.12     540.5       0.0 register_file/internal_memory_reg[5][6]/D
+    0:00:36   13070.1      1.11     536.1       0.0 register_file/internal_memory_reg[6][3]/D
+    0:00:36   13086.1      1.11     535.0       0.0 data_memory/internal_mem_reg[18][8]/D
+    0:00:36   13091.2      1.08     524.8       0.0 data_memory/internal_mem_reg[19][15]/D
+    0:00:36   13096.5      1.07     523.3       0.0 register_file/internal_memory_reg[5][6]/D
+    0:00:36   13121.7      1.07     521.3       0.0 data_memory/internal_mem_reg[13][4]/SETB
+    0:00:37   13131.4      1.06     518.1       0.0 register_file/internal_memory_reg[5][6]/D
+    0:00:37   13132.9      1.05     513.3       0.0 register_file/internal_memory_reg[5][6]/D
+    0:00:37   13135.9      1.05     511.0       0.0 register_file/internal_memory_reg[5][6]/D
+    0:00:37   13140.3      1.05     510.2       0.0 register_file/internal_memory_reg[5][6]/D
+    0:00:37   13154.2      1.04     506.8       0.0 data_memory/internal_mem_reg[19][15]/D
+    0:00:37   13163.9      1.03     501.8       0.0 data_memory/internal_mem_reg[18][1]/D
+    0:00:37   13177.9      1.02     499.0       0.0 data_memory/internal_mem_reg[17][15]/D
+    0:00:38   13191.6      1.02     495.9       0.0 data_memory/internal_mem_reg[12][3]/D
+    0:00:38   13179.1      1.02     495.7       0.0 register_file/internal_memory_reg[5][6]/D
+    0:00:38   13185.0      1.01     493.2       0.0 data_memory/internal_mem_reg[14][8]/D
+    0:00:38   13186.8      1.01     491.7       0.0 register_file/internal_memory_reg[5][6]/D
+    0:00:38   13187.8      1.00     488.5       0.0 register_file/internal_memory_reg[1][14]/D
+    0:00:38   13191.3      1.00     484.1       0.0 register_file/internal_memory_reg[5][6]/D
+    0:00:38   13191.1      0.99     482.7       0.0 data_memory/internal_mem_reg[1][7]/D
+    0:00:38   13197.2      0.99     480.3       0.0 register_file/internal_memory_reg[5][6]/D
+    0:00:39   13199.2      0.99     479.6       0.0 register_file/internal_memory_reg[1][5]/D
+    0:00:39   13199.2      0.98     478.4       0.0 register_file/internal_memory_reg[5][6]/D
+    0:00:39   13210.7      0.97     476.7       0.0                          
+    0:00:39   13193.6      0.97     476.8       0.0                          
+    0:00:39   13150.7      0.97     476.4       0.0                          
+    0:00:39   13112.1      0.97     476.4       0.0                          
+    0:00:40   13101.6      0.97     476.5       0.0                          
+    0:00:40   13089.4      0.97     476.6       0.0                          
+    0:00:40   13074.4      0.97     476.5       0.0                          
+    0:00:41   12964.4      0.97     476.4       0.0                          
+    0:00:41   12950.9      0.97     476.3       0.0                          
+    0:00:41   12936.4      0.97     476.4       0.0                          
+    0:00:41   12896.0      0.97     476.4       0.0                          
+    0:00:42   12884.1      0.97     476.4       0.0                          
+    0:00:42   12880.3      0.97     476.4       0.0                          
+    0:00:42   12868.6      0.97     476.1       0.0                          
+    0:00:42   12805.3      0.97     475.2       0.0                          
+    0:00:42   12801.5      0.97     474.5       0.0                          
+    0:00:42   12801.5      0.97     474.5       0.0                          
+    0:00:42   12801.5      0.97     474.5       0.0                          
+    0:00:42   12801.5      0.97     474.5       0.0                          
+    0:00:42   12801.5      0.97     474.5       0.0                          
+    0:00:42   12801.5      0.97     474.5       0.0                          
+    0:00:42   12808.1      0.97     474.4       0.0 data_memory/internal_mem_reg[23][5]/D
+    0:00:43   12820.0      0.97     472.3       0.0 data_memory/internal_mem_reg[23][5]/D
+    0:00:43   12825.6      0.96     464.8       0.0 data_memory/internal_mem_reg[23][5]/D
+    0:00:43   12832.0      0.94     461.7       0.0 data_memory/internal_mem_reg[23][5]/D
+    0:00:43   12822.6      0.94     460.8       0.0                          
+    0:00:43   12820.0      0.94     460.8       0.0                          
+    0:00:44   12816.7      0.94     460.5       0.0                          
+    0:00:44   12810.9      0.94     460.5       0.0                          
+    0:00:44   12815.5      0.93     459.2       0.0                          
+    0:00:44   12813.2      0.93     454.8       0.0                          
+    0:00:44   12808.9      0.92     451.4       0.0                          
+    0:00:45   12815.7      0.92     449.6       0.0                          
+    0:00:45   12816.7      0.92     448.5       0.0                          
+    0:00:45   12821.1      0.92     448.2       0.0                          
+    0:00:45   12827.2      0.92     446.5       0.0                          
+    0:00:45   12827.4      0.92     445.2       0.0                          
+    0:00:45   12834.5      0.92     444.6       0.0                          
+    0:00:45   12845.7      0.92     443.2       0.0                          
+    0:00:45   12849.3      0.92     442.4       0.0                          
+    0:00:45   12854.3      0.92     440.8       0.0                          
+    0:00:45   12869.3      0.92     438.5       0.0                          
+    0:00:45   12868.8      0.92     437.8       0.0                          
+    0:00:46   12874.2      0.92     436.1       0.0                          
+    0:00:46   12875.2      0.92     434.9       0.0                          
+    0:00:46   12881.3      0.92     434.6       0.0                          
+    0:00:46   12880.8      0.92     434.4       0.0                          
+    0:00:46   12885.9      0.92     434.4       0.0                          
+    0:00:46   12917.9      0.92     432.9       0.0                          
+    0:00:46   12917.9      0.92     432.7       0.0                          
+    0:00:46   12910.5      0.92     431.8       0.0                          
+    0:00:46   12905.9      0.92     431.7       0.0                          
+    0:00:46   12935.4      0.92     430.6       0.0                          
+    0:00:46   12932.1      0.92     429.0       0.0                          
+    0:00:46   12949.9      0.92     427.1       0.0                          
+    0:00:46   12980.4      0.92     426.1       0.0                          
+    0:00:47   12986.5      0.92     425.0       0.0                          
+    0:00:47   13000.2      0.92     423.2       0.0                          
+    0:00:47   13019.8      0.92     422.8       0.0                          
+    0:00:47   13016.7      0.92     421.7       0.0                          
+    0:00:47   13006.8      0.92     421.1       0.0                          
+    0:00:47   13020.1      0.92     420.1       0.0                          
+    0:00:47   13026.9      0.92     418.5       0.0                          
+    0:00:47   13037.1      0.92     417.5       0.0                          
+    0:00:47   13041.9      0.92     416.9       0.0                          
+    0:00:47   13042.4      0.92     415.9       0.0                          
+    0:00:47   13048.5      0.92     414.3       0.0                          
+    0:00:47   13044.4      0.92     413.2       0.0                          
+    0:00:48   13050.5      0.92     412.4       0.0                          
+    0:00:48   13080.0      0.92     411.8       0.0                          
+    0:00:48   13101.9      0.92     411.3       0.0                          
+    0:00:48   13097.8      0.92     411.0       0.0                          
+    0:00:48   13131.1      0.92     410.3       0.0                          
+    0:00:48   13133.9      0.92     409.5       0.0                          
+    0:00:48   13159.1      0.92     409.0       0.0                          
+    0:00:48   13161.1      0.92     408.9       0.0                          
+    0:00:48   13164.4      0.92     408.1       0.0                          
+    0:00:48   13165.9      0.92     404.2       0.0                          
+    0:00:48   13168.7      0.92     403.8       0.0                          
+    0:00:49   13168.0      0.92     403.8       0.0                          
+    0:00:49   13174.1      0.92     403.0       0.0                          
+    0:00:49   13188.3      0.92     402.7       0.0                          
+    0:00:49   13193.6      0.92     402.1       0.0                          
+    0:00:49   13193.1      0.92     401.4       0.0                          
+    0:00:49   13202.3      0.92     399.6       0.0                          
+    0:00:49   13211.2      0.92     399.2       0.0                          
+    0:00:49   13220.8      0.92     398.4       0.0                          
+    0:00:49   13226.9      0.92     397.8       0.0                          
+    0:00:49   13229.0      0.92     397.5       0.0                          
+    0:00:49   13227.2      0.92     397.4       0.0                          
+    0:00:50   13253.1      0.92     397.2       0.0                          
+    0:00:50   13303.2      0.92     396.6       0.0                          
+    0:00:50   13303.2      0.92     395.3       0.0                          
+    0:00:50   13296.8      0.92     394.7       0.0                          
+    0:00:50   13300.6      0.92     394.1       0.0                          
+    0:00:50   13308.8      0.92     393.9       0.0                          
+    0:00:50   13340.5      0.92     393.3       0.0                          
+    0:00:50   13380.7      0.90     390.6       0.0 register_file/internal_memory_reg[4][3]/D
+    0:00:50   13380.7      0.90     390.0       0.0 register_file/internal_memory_reg[4][3]/D
+    0:00:51   13381.2      0.88     382.2       0.0 register_file/internal_memory_reg[4][3]/D
+    0:00:51   13386.0      0.87     381.8       0.0 register_file/internal_memory_reg[0][3]/D
+    0:00:51   13389.1      0.86     381.0       0.0 register_file/internal_memory_reg[4][3]/D
+    0:00:51   13392.4      0.86     379.3       0.0 register_file/internal_memory_reg[4][0]/D
+    0:00:51   13397.5      0.86     379.1       0.0 register_file/internal_memory_reg[4][0]/D
+    0:00:51   13397.5      0.86     378.9       0.0 register_file/internal_memory_reg[4][0]/D
+    0:00:51   13416.8      0.85     376.3       0.0 register_file/internal_memory_reg[0][2]/D
+    0:00:51   13418.0      0.85     375.4       0.0 data_memory/internal_mem_reg[3][15]/D
+    0:00:51   13413.2      0.84     374.4       0.0 data_memory/internal_mem_reg[18][5]/D
+    0:00:52   13416.8      0.83     372.7       0.0 data_memory/internal_mem_reg[18][5]/D
+    0:00:52   13430.0      0.83     372.0       0.0 PC/PC_out_reg[12]/RSTB   
+    0:00:52   13446.5      0.82     370.9       0.0 register_file/internal_memory_reg[3][0]/D
+    0:00:52   13450.3      0.82     370.5       0.0 register_file/internal_memory_reg[5][5]/D
+    0:00:53   13451.1      0.81     370.5       0.0 register_file/internal_memory_reg[5][5]/D
+Loading db file '/home/KNUEEhdd1/comp311/comp9/work/proj1/dc/saed32hvt_ff0p95v125c.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+1
+write -f verilog $currentDesign -hierarchy -output $currentDesign.syn.v
+Writing verilog file '/home/KNUEEhdd1/comp311/comp9/work/proj1/dc/MIPS16.syn.v'.
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+Warning: Verilog writer has added 16 nets to module alu using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+Warning: Verilog writer has added 9 nets to module MIPS16 using SYNOPSYS_UNCONNECTED_ as prefix.  Please use the change_names command to make the correct changes before invoking the verilog writer.  (VO-11)
+1
+write_sdc $currentDesign.sdc
+1
+report_qor
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : qor
+Design : MIPS16
+Version: O-2018.06-SP4
+Date   : Wed Jun  8 23:38:39 2022
+****************************************
+
+
+  Timing Path Group 'myCLK'
+  -----------------------------------
+  Levels of Logic:              26.00
+  Critical Path Length:          2.78
+  Critical Path Slack:          -0.81
+  Critical Path Clk Period:      2.00
+  Total Negative Slack:       -370.50
+  No. of Violating Paths:      525.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+
+  Cell Count
+  -----------------------------------
+  Hierarchical Cell Count:         25
+  Hierarchical Port Count:       1767
+  Leaf Cell Count:               4250
+  Buf/Inv Cell Count:            1459
+  Buf Cell Count:                 565
+  Inv Cell Count:                 894
+  CT Buf/Inv Cell Count:            0
+  Combinational Cell Count:      3687
+  Sequential Cell Count:          563
+  Macro Count:                      0
+  -----------------------------------
+
+
+  Area
+  -----------------------------------
+  Combinational Area:     9780.477818
+  Noncombinational Area:  3670.601902
+  Buf/Inv Area:           3103.352441
+  Total Buffer Area:          1457.26
+  Total Inverter Area:        1646.09
+  Macro/Black Box Area:      0.000000
+  Net Area:               2447.140627
+  -----------------------------------
+  Cell Area:             13451.079720
+  Design Area:           15898.220348
+
+
+  Design Rules
+  -----------------------------------
+  Total Number of Nets:          5698
+  Nets With Violations:             0
+  Max Trans Violations:             0
+  Max Cap Violations:               0
+  -----------------------------------
+
+
+  Hostname: knuee-srv2
+
+  Compile CPU Statistics
+  -----------------------------------------
+  Resource Sharing:                    1.93
+  Logic Optimization:                  6.92
+  Mapping Optimization:               98.62
+  -----------------------------------------
+  Overall Compile Time:              109.37
+  Overall Compile Wall Clock Time:    53.42
+
+  --------------------------------------------------------------------
+
+  Design  WNS: 0.81  TNS: 370.50  Number of Violating Paths: 525
+
+
+  Design (Hold)  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
+
+  --------------------------------------------------------------------
+
+
+1
+exit
+
+Thank you...
